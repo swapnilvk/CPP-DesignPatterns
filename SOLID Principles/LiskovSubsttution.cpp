@@ -17,7 +17,6 @@ public:
 	{
 
 	}
-
 	virtual void set_height(const int height)
 	{
 		this->height = height;
@@ -26,17 +25,14 @@ public:
 	{
 		this->width = width;
 	}
-
 	virtual int get_height() const
 	{
 		return height;
 	}
-
 	virtual int get_width() const
 	{
 		return width;
 	}
-
 	int Area() const { return width * height; }
 };
 
@@ -44,7 +40,6 @@ void ProcessRectangle(Rectangle & r)
 {
 	int width = r.get_width();
 	r.set_height(10);
-
 	std::cout << "Expected area = " << width * 10 << "Actual area =" << r.Area() <<std::endl;
 }
 
@@ -56,7 +51,6 @@ public:
 	{
 
 	}
-
 	void set_height(const int size) override
 	{
 		this->height = width = size;
@@ -76,5 +70,9 @@ int main()
 	ProcessRectangle(s);
 
 	getchar();
-
 }
+
+/* Output
+Expected area = 50Actual area =50
+Expected area = 50Actual area =100
+*/
