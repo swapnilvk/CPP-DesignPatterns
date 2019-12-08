@@ -3,7 +3,7 @@
 #include<string>
 
 enum class Color {Red, Green, Blue};
-enum class Size {Lage, Small, Medium};
+enum class Size {Lage, Small, Medium}; 
 
 struct Product
 {
