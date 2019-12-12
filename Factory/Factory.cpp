@@ -3,6 +3,8 @@
 #include<sstream>
 #include <cmath>
 
+
+
 enum class PontType
 {
 	catesian, polar
@@ -15,15 +17,6 @@ public:
 	{
 		return os << "x: " << point.x << " y: " << point.y;
 	}
-	static Point NewCartesian(double x, double y)
-	{
-		return { x,y };
-	}
-
-	static Point NewPolar(double r, double theta)
-	{
-		return { r*cos(theta),r*sin(theta) };
-	}
 
 private:
 	double x, y;
@@ -33,14 +26,30 @@ private:
 	{
 
 	}
+
+	friend class PointFactory;
+};
+
+class PointFactory
+{
+public:
+	static Point NewCartesian(double x, double y)
+	{
+		return { x,y };
+	}
+
+	static Point NewPolar(double r, double theta)
+	{
+		return { r*cos(theta),r*sin(theta) };
+	}
 };
 
 int main()
 {
-	auto pc = Point::NewCartesian(1, 2);
+	auto pc = PointFactory::NewCartesian(1, 2);
 	std::cout << pc << std::endl;
 
-	auto pp = Point::NewPolar(5, M_PI_4);
+	auto pp = PointFactory::NewPolar(5, M_PI_4);
 	std::cout << pp << std::endl;
 
 	getchar();
