@@ -3,8 +3,6 @@
 #include<sstream>
 #include <cmath>
 
-
-
 enum class PontType
 {
 	catesian, polar
