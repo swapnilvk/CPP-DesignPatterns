@@ -58,3 +58,7 @@ int main()
 
 	return 0;
 }
+
+/*Output:
+Name: Swapnil KulkarniWork addressStreet: M G RoadCity: PuneSuit: 200
+Name: Smruti KulkarniWork addressStreet: M G RoadCity: PuneSuit: 200 */

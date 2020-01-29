@@ -4,13 +4,13 @@
 
 # Compiler settings - Can be customized.
 CC = g++
-CXXFLAGS = -std=c++17 -Wall
+CXXFLAGS = -std=c++11 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
 APPNAME = prototype
 EXT = .cpp
-SRCDIR = /home/swapnil/Desktop/sample
+SRCDIR = /home/swapnil/Documents/CPP/DesignPatterns/Prototype
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############
